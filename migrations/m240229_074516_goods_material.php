@@ -17,7 +17,6 @@ class m240229_074516_goods_material extends Migration
             'goods_id'=>$this->integer()->notNull(),
             'material-id'=>$this->integer()->notNull(),
         ]);
-
     }
 
     /**
