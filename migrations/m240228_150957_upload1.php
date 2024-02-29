@@ -10,9 +10,12 @@ class m240228_150957_upload1 extends Migration
     /**
      * {@inheritdoc}
      */
-    public function safeUp()
+    public function safeUp(): void
     {
-
+        $this->createIndex('idx-goods-brands_id','goods','brand_id');
+        $this->createIndex('idx-goods-material_id','goods','material_id');
+        $this->addForeignKey('fk-goods-material_id','goods','material_id','materials','id');
+        $this->addForeignKey('fk-goods-brand_id','goods','brand_id','brands','id');
     }
 
     /**

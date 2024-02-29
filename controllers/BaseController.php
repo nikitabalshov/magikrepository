@@ -11,7 +11,7 @@ class BaseController extends Controller
     public string $suffix='';
     public function init():void
     {
-        $this->suffix = array_flip[Yii::$app->UrlManager->languages][Yii::$app->language];
+        $this->suffix = array_flip(Yii::$app->UrlManager->languages)[Yii::$app->language];
         parent::init();
     }
 
